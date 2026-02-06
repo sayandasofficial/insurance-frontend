@@ -1,7 +1,7 @@
 const API_BASE = import.meta.env.VITE_API_URL;
 
 export const submitClaimAPI = async (data) => {
-  const res = await fetch(`${API_BASE}/claims`, {
+  const res = await fetch(`${API_BASE}/accidents`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -13,12 +13,12 @@ export const submitClaimAPI = async (data) => {
 };
 
 export const getClaimsAPI = async () => {
-  const res = await fetch(`${API_BASE}/claims`);
+  const res = await fetch(`${API_BASE}/accidents`);
   return res.json();
 };
 
 export const updateClaimStatusAPI = async (id, status) => {
-  const res = await fetch(`${API_BASE}/claims/${id}`, {
+  const res = await fetch(`${API_BASE}/accidents/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
