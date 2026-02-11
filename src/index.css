@@ -95,3 +95,15 @@
   --font-family-sans: Inter, system-ui, sans-serif;
 }
 
+.input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
