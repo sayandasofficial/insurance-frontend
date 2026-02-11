@@ -132,7 +132,7 @@ const InsuranceForm = () => {
             <label className="label">
               Type of Claim <span className="text-red-500">*</span>
             </label>
-            <label className="label">Type of Claim</label>
+
             <select
               name="claim_type"
               className="input"
@@ -151,7 +151,7 @@ const InsuranceForm = () => {
   <label className="label">
               Policy Number <span className="text-red-500">*</span>
             </label>
-  <label className="label">Policy Number</label>
+
 
   {formData.claim_type === "Marine" ? (
     <select
@@ -189,7 +189,7 @@ const InsuranceForm = () => {
   <label className="label">
               Insurance Company <span className="text-red-500">*</span>
             </label>
-  <label className="label">Insurance Company</label>
+
   <input
     className="input"
     name="insurance_company"
@@ -205,7 +205,7 @@ const InsuranceForm = () => {
   <label className="label">
               Incident Type <span className="text-red-500">*</span>
             </label>
-  <label className="label">Incident Type</label>
+
   <select
     className="input"
     name="incident_type"
@@ -226,7 +226,6 @@ const InsuranceForm = () => {
   <label className="label">
               Incident Date & Time <span className="text-red-500">*</span>
             </label>
-  <label className="label">Incident Date & Time</label>
   <input
     type="datetime-local"
     name="incident_datetime"
@@ -243,7 +242,7 @@ const InsuranceForm = () => {
   <label className="label">
               Transporter Name <span className="text-red-500">*</span>
             </label>
-  <label className="label">Transporter Name</label>
+
   <input
     className="input"
     name="transporter_name"
@@ -259,7 +258,6 @@ const InsuranceForm = () => {
   <label className="label">
               Vehicle Number <span className="text-red-500">*</span>
             </label>
-  <label className="label">Vehicle Number</label>
   <input
     className="input"
     name="vehicle_no"
