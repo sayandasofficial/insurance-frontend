@@ -129,6 +129,9 @@ const InsuranceForm = () => {
 
           {/* TYPE OF CLAIM */}
           <div>
+            <label className="label">
+              Type of Claim <span className="text-red-500">*</span>
+            </label>
             <label className="label">Type of Claim</label>
             <select
               name="claim_type"
@@ -145,6 +148,9 @@ const InsuranceForm = () => {
 
           {/* POLICY NUMBER */}
 <div>
+  <label className="label">
+              Policy Number <span className="text-red-500">*</span>
+            </label>
   <label className="label">Policy Number</label>
 
   {formData.claim_type === "Marine" ? (
@@ -180,6 +186,9 @@ const InsuranceForm = () => {
 
           {/* INSURANCE COMPANY */}
 <div>
+  <label className="label">
+              Insurance Company <span className="text-red-500">*</span>
+            </label>
   <label className="label">Insurance Company</label>
   <input
     className="input"
@@ -193,6 +202,9 @@ const InsuranceForm = () => {
 
           {/* INCIDENT TYPE */}
 <div>
+  <label className="label">
+              Incident Type <span className="text-red-500">*</span>
+            </label>
   <label className="label">Incident Type</label>
   <select
     className="input"
@@ -211,6 +223,9 @@ const InsuranceForm = () => {
 
           {/* INCIDENT DATE */}
 <div>
+  <label className="label">
+              Incident Date & Time <span className="text-red-500">*</span>
+            </label>
   <label className="label">Incident Date & Time</label>
   <input
     type="datetime-local"
@@ -225,6 +240,9 @@ const InsuranceForm = () => {
 
           {/* TRANSPORTER */}
 <div>
+  <label className="label">
+              Transporter Name <span className="text-red-500">*</span>
+            </label>
   <label className="label">Transporter Name</label>
   <input
     className="input"
@@ -238,6 +256,9 @@ const InsuranceForm = () => {
 
           {/* VEHICLE */}
 <div>
+  <label className="label">
+              Vehicle Number <span className="text-red-500">*</span>
+            </label>
   <label className="label">Vehicle Number</label>
   <input
     className="input"
