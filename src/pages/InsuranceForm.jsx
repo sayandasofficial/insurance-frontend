@@ -144,97 +144,110 @@ const InsuranceForm = () => {
           </div>
 
           {/* POLICY NUMBER */}
-          <div>
-            <label className="label">Policy Number</label>
+<div>
+  <label className="label">Policy Number</label>
 
-            {formData.claim_type === "Marine" ? (
-              <select
-                name="policy_number"
-                className="input"
-                value={formData.policy_number}
-                onChange={handleChange}
-              >
-                <option value="">
-                  {loadingPolicies ? "Loading..." : "Select Policy"}
-                </option>
+  {formData.claim_type === "Marine" ? (
+    <select
+      name="policy_number"
+      className="input"
+      value={formData.policy_number}
+      onChange={handleChange}
+      required   // ✅ ADDED
+    >
+      <option value="">
+        {loadingPolicies ? "Loading..." : "Select Policy"}
+      </option>
 
-                {marinePolicies.map((p, idx) => (
-                  <option key={idx} value={p.policy_number}>
-                    {p.policy_number}
-                  </option>
-                ))}
-              </select>
-            ) : (
-              <input
-                name="policy_number"
-                className="input"
-                value={formData.policy_number}
-                onChange={handleChange}
-                placeholder="Leave blank for Non-Marine"
-              />
-            )}
-          </div>
+      {marinePolicies.map((p, idx) => (
+        <option key={idx} value={p.policy_number}>
+          {p.policy_number}
+        </option>
+      ))}
+    </select>
+  ) : (
+    <input
+      name="policy_number"
+      className="input"
+      value={formData.policy_number}
+      onChange={handleChange}
+      placeholder="Leave blank for Non-Marine"
+      required   // ✅ ADDED
+    />
+  )}
+</div>
+
 
           {/* INSURANCE COMPANY */}
-          <div>
-            <label className="label">Insurance Company</label>
-            <input
-              className="input"
-              name="insurance_company"
-              value={formData.insurance_company}
-              onChange={handleChange}
-            />
-          </div>
+<div>
+  <label className="label">Insurance Company</label>
+  <input
+    className="input"
+    name="insurance_company"
+    value={formData.insurance_company}
+    onChange={handleChange}
+    required   // ✅ ADDED
+  />
+</div>
+
 
           {/* INCIDENT TYPE */}
-          <div>
-            <label className="label">Incident Type</label>
-            <select
-              className="input"
-              name="incident_type"
-              value={formData.incident_type}
-              onChange={handleChange}
-            >
-              <option>Fire</option>
-              <option>Theft</option>
-              <option>Hijack</option>
-              <option>Jerk & Jolt</option>
-            </select>
-          </div>
+<div>
+  <label className="label">Incident Type</label>
+  <select
+    className="input"
+    name="incident_type"
+    value={formData.incident_type}
+    onChange={handleChange}
+    required   // ✅ ADDED
+  >
+    <option>Fire</option>
+    <option>Theft</option>
+    <option>Hijack</option>
+    <option>Jerk & Jolt</option>
+  </select>
+</div>
+
 
           {/* INCIDENT DATE */}
-          <div>
-            <label className="label">Incident Date & Time</label>
-            <input
-              type="datetime-local"
-              name="incident_datetime"
-              className="input"
-              value={formData.incident_datetime}
-              onChange={handleChange}
-            />
-          </div>
+<div>
+  <label className="label">Incident Date & Time</label>
+  <input
+    type="datetime-local"
+    name="incident_datetime"
+    className="input"
+    value={formData.incident_datetime}
+    onChange={handleChange}
+    required   // ✅ ADDED
+  />
+</div>
+
 
           {/* TRANSPORTER */}
-          <div>
-            <label className="label">Transporter Name</label>
-            <input
-              className="input"
-              name="transporter_name"
-              value={formData.transporter_name}
-              onChange={handleChange}
-            />
-          </div>
+<div>
+  <label className="label">Transporter Name</label>
+  <input
+    className="input"
+    name="transporter_name"
+    value={formData.transporter_name}
+    onChange={handleChange}
+    required   // ✅ ADDED
+  />
+</div>
+
 
           {/* VEHICLE */}
-          <div>
-            <label className="label">Vehicle Number</label>
-            <input
-              className="input"
-              name="vehicle_no"
-              value={formData.vehicle_no}
-              onChange={handleChange}
-            />
-          </div>
+<div>
+  <label className="label">Vehicle Number</label>
+  <input
+    className="input"
+    name="vehicle_no"
+    value={formData.vehicle_no}
+    onChange={handleChange}
+    required   // ✅ ADDED
+  />
+</div>
+
 
           {/* CONSIGNOR */}
           <div>
