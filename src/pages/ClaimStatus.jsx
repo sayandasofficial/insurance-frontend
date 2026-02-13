@@ -48,7 +48,7 @@ const ClaimStatus = () => {
      EDIT CLAIM NAVIGATION
   =============================== */
   const handleEdit = () => {
-    navigate(`/insurance-form?edit=${claimData.claim_number}`);
+    navigate(`/edit-claim?claim=${claimData.claim_number}`);
   };
 
   return (
@@ -113,18 +113,15 @@ const ClaimStatus = () => {
               </div>
 
               <div>
-                <strong>Policy Number:</strong>{" "}
-                {claimData.policy_number}
+                <strong>Policy Number:</strong> {claimData.policy_number}
               </div>
 
               <div>
-                <strong>Insurance Company:</strong>{" "}
-                {claimData.insurance_company}
+                <strong>Insurance Company:</strong> {claimData.insurance_company}
               </div>
 
               <div>
-                <strong>Incident Type:</strong>{" "}
-                {claimData.incident_type}
+                <strong>Incident Type:</strong> {claimData.incident_type}
               </div>
 
               <div>
@@ -137,7 +134,6 @@ const ClaimStatus = () => {
             {/* BUTTONS */}
             <div className="flex gap-3 mt-6">
 
-              {/* EDIT BUTTON ONLY IF UNDER REVIEW */}
               {(claimData.claim_status === "Under Review" ||
                 claimData.claim_status === "Under Review (edited)") && (
 

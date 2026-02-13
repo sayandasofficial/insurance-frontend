@@ -10,6 +10,7 @@ import InsuranceForm from './pages/InsuranceForm';
 import ClaimUpload from './pages/ClaimUpload';
 import SuccessPage from './pages/SuccessPage';
 import ClaimStatus from './pages/ClaimStatus';
+import EditClaim from './pages/EditClaim';
 
 /**
  * Main App Component
@@ -20,28 +21,33 @@ function App() {
     <ClaimProvider>
       <Router>
         <div className="page-container">
-          {/* Sticky Header */}
+          
+          {/* Header */}
           <Header />
 
           {/* Main Content */}
           <main className="flex-grow">
             <Routes>
-              {/* Home Page - Dashboard */}
+
+              {/* Home */}
               <Route path="/" element={<Home />} />
 
-              {/* Insurance Claim Form */}
+              {/* Submit Claim */}
               <Route path="/insurance-form" element={<InsuranceForm />} />
 
-              {/* Claim Document Upload */}
+              {/* Upload Claim */}
               <Route path="/claim-upload" element={<ClaimUpload />} />
 
-              {/* Success Confirmation */}
+              {/* Success Page */}
               <Route path="/success" element={<SuccessPage />} />
 
-              {/* Claim Status Check */}
+              {/* Claim Status */}
               <Route path="/claim-status" element={<ClaimStatus />} />
 
-              {/* 404 - Page Not Found */}
+              {/* ✅ NEW EDIT CLAIM ROUTE */}
+              <Route path="/edit-claim" element={<EditClaim />} />
+
+              {/* 404 Page */}
               <Route 
                 path="*" 
                 element={
@@ -54,28 +60,28 @@ function App() {
                       <p className="text-gray-600 mb-8">
                         The page you're looking for doesn't exist or has been moved.
                       </p>
+
                       <a 
                         href="/" 
                         className="btn-primary inline-flex items-center gap-2"
                       >
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
-                                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                        </svg>
                         Back to Home
                       </a>
+
                     </div>
                   </div>
                 }
               />
+
             </Routes>
           </main>
 
           {/* Footer */}
           <Footer />
 
-          {/* Toast Notifications */}
+          {/* Toast */}
           <ToastNotification />
+
         </div>
       </Router>
     </ClaimProvider>
@@ -83,4 +89,3 @@ function App() {
 }
 
 export default App;
-
